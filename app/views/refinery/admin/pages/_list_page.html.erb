@@ -26,17 +26,17 @@
       <%= link_to refinery_icon_tag('application_go.png'),
                   refinery.page_path(page),
                   :target => "_blank",
-                  :title => t('.view_live_html') %>
+                  :title => t('view_live_html', :scope => 'refinery.admin.pages') %>
       <%= link_to refinery_icon_tag('page_add.png'),
                   refinery.new_admin_page_path(:parent_id => page.id),
                   :title => t('new', :scope => 'refinery.admin.pages') %>
 
       <%= link_to refinery_icon_tag('application_edit.png'),
-                  refinery.edit_admin_page_path(page.uncached_nested_url),
+                  refinery.edit_admin_page_path(page.id),
                   :title => t('edit', :scope => 'refinery.admin.pages') %>
 
       <%= link_to refinery_icon_tag('delete.png'),
-                  refinery.admin_page_path(page.uncached_nested_url),
+                  refinery.admin_page_path(page.id),
                   :class => "cancel confirm-delete",
                   :title => t('delete', :scope => 'refinery.admin.pages'),
                   :confirm => t('message', :scope => 'refinery.admin.delete', :title => page.title_with_meta.gsub(/\ ?<em>.*<\/em>/, "")),
