@@ -1,0 +1,39 @@
+pl:
+  #page_menus plugin
+  refinery:
+    plugins:
+      refinery_page_menus:
+        title: Menu
+        description: Twórz i zarządzaj menu strony
+    admin:
+      pages:
+        new: "Dodaj nową stronę"
+        view_live_html: "Zobacz zawartość na żywo"
+        form_advanced_options: 
+          show_in_menu_title: Pokaż w menu głównym
+          show_in_menu_description: Pokazuje stronę w menu głównym
+          show_in_menu_help: Odznacz to, aby nie wyświetlać strony w menu głównym. To może być wygodne, jeśli chcesz tylko bezpośrednio linować do strony lub umieścić ją w innym menu.
+        actions:
+          pages:
+            title: Strony
+            create_new: Dodaj nową stronę
+            manage: Zarządzaj stronami
+          menus:
+            title: Menu
+            main: Menu główne
+            create_new: Dodaj nowe menu
+            manage: Zarządzaj menu
+            edit: Edytuj to menu
+      page_menus:
+        form:
+          menu_pages: Strony w menu
+          pages_help: To jest lista wszsytkich stron w tym menu. Kliknij '<', aby usunąć ją z menu.
+          all_pages: Strony nieobecne w menu
+          all_pages_help: To jest lista wszystkich stron, których jeszcze nie ma w menu. Kliknij'>' aby je dodać.
+  activerecord:
+    models:
+      refinery/page_menu: Menu
+    attributes:
+      refinery/page_menu:
+        title: Tytuł
+        pages: Strony
